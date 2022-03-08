@@ -39,8 +39,11 @@ end
 
 #extract availability
 availability_node = nokogiri.css('#availability span.a-size-medium')
-#if availability_node
-product['availability'] = availability_node.text.strip 
+if availability_node
+  product['available'] = availability_node.text.strip == 'In Stock.' ? true : false
+else
+  product['available'] = nil
+end
 
 #extract product description
 description = ''
@@ -53,6 +56,8 @@ product['description'] = description.strip
 
 # specify the collection where this record will be stored
 product['_collection'] = "products"
+
+p product
 
 # save the product to the job’s outputs
 outputs << product
