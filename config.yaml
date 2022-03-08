@@ -14,3 +14,5 @@ parsers:
 exporters:
   - file: ./exporters/products_tv_json.yaml
     disabled: false
+  - file: ./exporters/products_tv_csv.yaml
+    disabled: false

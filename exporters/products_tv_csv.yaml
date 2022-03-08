@@ -1,0 +1,29 @@
+exporter_name: products_tv_csv
+exporter_type: json
+collection: products
+start_on_job_done: true
+fields:
+  - header: "gid"
+    path: "_gid"
+  - header: "created_at"
+    path: "_created_at"
+  - header: "asin"
+    path: "asin"
+  - header: "available"
+    path: "available"
+  - header: "category"
+    path: "category"
+  - header: "description"
+    path: "description"
+  - header: "price"
+    path: "price"
+  - header: "rating"
+    path: "rating"
+  - header: "reviews_count"
+    path: "reviews_count"
+  - header: "seller"
+    path: "seller"
+  - header: "title"
+    path: "title"
+  - header: "url"
+    path: "url"
